@@ -1,0 +1,15 @@
+.app-container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-button {
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px 20px;
+  width: 20%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
