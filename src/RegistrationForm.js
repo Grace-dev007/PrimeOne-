@@ -90,7 +90,7 @@ export default function RegistrationForm() {
                 } else {
                     // Something happened while setting up the request
                     console.error('Error message:', error.message);
-                    alert('An error occurred while trying to register');
+                    alert('An error occurred while trying to registered');
                 }
             }
         }
