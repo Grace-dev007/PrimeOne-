@@ -55,7 +55,7 @@ export default function LoginForm() {
                 {errors.password && <p className="error">{errors.password}</p>}
             </div>
 
-            <div className="extra-options">
+            {/* <div className="extra-options">
                 <div className="remember-me">
                     <label>
                         <input
@@ -69,7 +69,7 @@ export default function LoginForm() {
                 <div className="forgot-password">
                     <a href="#">Forgot Password?</a>
                 </div>
-            </div>
+            </div> */}
 
             <button type="submit">Login</button>
         </form>
