@@ -4,7 +4,7 @@ import './Form.css';
 export default function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [rememberMe, setRememberMe] = useState(false); // New state for Remember Me
+    // const [rememberMe, setRememberMe] = useState(false); // New state for Remember Me
     const [errors, setErrors] = useState({});
 
     const validate = () => {
@@ -29,7 +29,7 @@ export default function LoginForm() {
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
         } else {
-            console.log('Login successful:', { email, password, rememberMe });
+            console.log('Login successful:', { email, password});
             alert('Login Successful!');
         }
     };
