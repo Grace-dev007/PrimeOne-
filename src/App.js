@@ -1,24 +1,18 @@
-import React, { useState } from 'react';
-import LoginForm from './LoginForm';
-import RegistrationForm from './RegistrationForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import RegistrationForm from './RegistrationForm';  // Your registration form
+import LoginForm from './LoginForm';  
 import './App.css';
 
-const App = () => {
-    const [isLogin, setIsLogin] = useState(true);
 
-    const toggleForm = () => {
-        setIsLogin(!isLogin);
-    };
-
+function App() {
     return (
-        <div className="app-container">
-            <h1>{isLogin ? 'Login' : 'Register'}</h1>
-            {isLogin ? <LoginForm /> : <RegistrationForm />}<br></br>
-            <button className="toggle-button" onClick={toggleForm}>
-                {isLogin ? 'Switch to Register' : 'Switch to Login'}
-            </button>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/register" element={<RegistrationForm />} />
+                <Route path="/" element={<LoginForm />} />
+            </Routes>
+        </Router>
     );
-};
+}
 
 export default App;
