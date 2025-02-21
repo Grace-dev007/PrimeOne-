@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import './Form.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     // const [rememberMe, setRememberMe] = useState(false); // New state for Remember Me
     const [errors, setErrors] = useState({});
+    const navigate = useNavigate();
+  
 
     const validate = () => {
         const errors = {};
@@ -23,16 +28,46 @@ export default function LoginForm() {
         return errors;
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const validationErrors = validate();
-        if (Object.keys(validationErrors).length > 0) {
-            setErrors(validationErrors);
-        } else {
-            console.log('Login successful:', { email, password});
-            alert('Login Successful!');
-        }
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const validationErrors = validate();
+    //     if (Object.keys(validationErrors).length > 0) {
+    //         setErrors(validationErrors);
+    //     } else {
+    //         console.log('Login successful:', { email, password});
+    //         alert('Login Successful!');
+    //     }
+    // };
+    
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+        setErrors(validationErrors);
+        return;
+    }
+
+    try {
+        const response = await axios.post('http://192.168.0.27:4000/api/user/login', {
+            email,
+            password
+        });
+
+        console.log('Login successful:', response.data);
+
+        alert('Login Successful!');
+     
+    } catch (error) {
+
+        console.error('Login error:', error.response || error.message);
+        alert('Login failed! Please check your credentials.');
+    }
+};
+const handleRegisterClick = () => {
+    navigate('/register'); // Redirect to /register route
+};
 
     return (
         <form className="form-container" onSubmit={handleSubmit}>
@@ -71,7 +106,8 @@ export default function LoginForm() {
                 </div>
             </div> */}
 
-            <button type="submit">Login</button>
+            <button type="submit">Login</button> <br/><br/>
+            <button type="button" onClick={handleRegisterClick}>Register</button>
         </form>
     );
 };

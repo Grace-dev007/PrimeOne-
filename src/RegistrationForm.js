@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Form.css';
 import axios from 'axios';
 
@@ -11,6 +12,7 @@ export default function RegistrationForm() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState({});
+    const navigate = useNavigate(); 
 
     const validate = () => {
         const errors = {};
@@ -76,6 +78,7 @@ export default function RegistrationForm() {
     
                 // If the registration is successful, show a success message
                 alert('Registration Successful!');
+                navigate("/")
                 console.log('Registration successful:', response.data);
             } catch (error) {
                 // If the request fails (error status or network issue)
@@ -123,6 +126,7 @@ export default function RegistrationForm() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
             </div>
@@ -162,7 +166,8 @@ export default function RegistrationForm() {
                 />
                 {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Switch to Register</button>
+           
         </form>
     );
 };
