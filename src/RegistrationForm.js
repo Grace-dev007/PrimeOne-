@@ -17,7 +17,7 @@ export default function RegistrationForm() {
     const validate = () => {
         const errors = {};
         if (!type) {
-            errors.name = 'User type cannot be blank.';
+            errors.name = 'User type cannot be blank must be fill the field.';
         }
 
         if (!name) {
