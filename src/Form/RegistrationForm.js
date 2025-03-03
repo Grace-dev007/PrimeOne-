@@ -78,7 +78,7 @@ export default function RegistrationForm() {
     
                 // If the registration is successful, show a success message
                 alert('Registration Successful!');
-                navigate("/")
+                navigate("/login")
                 console.log('Registration successful:', response.data);
             } catch (error) {
                 // If the request fails (error status or network issue)

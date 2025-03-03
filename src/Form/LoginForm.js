@@ -70,6 +70,8 @@ const handleRegisterClick = () => {
 };
 
     return (
+
+        
         <form className="form-container" onSubmit={handleSubmit}>
             <div>
                 <label>Email</label>
