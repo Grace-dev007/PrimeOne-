@@ -1,0 +1,85 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh; /* Ensure page covers full viewport height */
+    margin-top: 60px;
+  }
+
+  .login-page h1 {
+    color: gray;
+    font-size: 50px;
+  }
+  
+  .button-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .button-container button {
+    padding: 19px 300px;
+    border: 1px solid #cd7b00;
+    background-color: whitesmoke;
+    color: #990100;
+    cursor: pointer;
+    margin: 0 5px;
+    white-space: nowrap;
+  }
+
+  .button-container :hover {
+    background-color: #fd7e14;
+  }
+  
+  .login-form-container {
+    width: 480px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin-top: 0; /* Adjust spacing as needed */
+  }
+  
+  .login-header {
+    text-align: center;
+    background-image: url('../../images/login.jpg'); /* Add your image path here */
+    background-size: cover; /* Ensure the image fits within the text */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: center; /* Center the image within the text */
+    height: 100px;
+    margin-bottom: 20px;
+    position:relative; /* Make login-header relative for positioning the image */
+  }
+
+  .login-header h2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  
+
+  .form-inputs input {
+    width: 90%;
+    padding: 18px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-button {
+    width: 30%;
+    padding: 10px ;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
