@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  background-color: white; /* Background color */
+  position: fixed; /* Make the navbar fixed */
+   width: 100%; /* Make the navbar span the full width */
+   z-index: 100; /*Ensure it's on top of other elements */
+   top: 0; /* Align to the top of the viewport */
+   left: 0; /* Align to the left of the viewport */
+}
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 180px; /* Logo image width */
+    margin-right: 10px;
+  }
+  
+  
+  .contact a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    color: #525252;
+    line-height: 18px;
+    font-weight: bold;
+    margin-left: 190%;
+  }
+  .contact  :hover {
+    color: #980000;
+  }
+  
+  .contact img {
+    width: 20px; /* Email icon width */
+    margin-right: 5px;
+  }
+  
+  .buttons {
+    display: flex; /* Make the buttons container a flex container */
+     align-items: center;
+     border-color: #333;
+     border-radius: 2px;
+     margin-right: 130px;
+  }
+
+  .buttons :hover{
+      background-color: #fd7e14;
+  }
+  
+  .buttons button {
+    border: 2px solid #cd7b00;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 30px; 
+    font-weight: 500;
+    font-size: 13px;/* Space between buttons */
+  }
+  
+  .employer-button {
+  
+    color: #990100; /* Employer button text color */
+  }
+  
+  .jobseeker-button {
+    
+
+    color: #990100; /* Job seeker button text color */
+  }

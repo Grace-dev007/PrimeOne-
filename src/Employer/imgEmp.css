@@ -1,0 +1,33 @@
+.image-container {
+    position: relative; /* Needed to position the text overlay */
+    width: 100%; /* Image container width */
+    top: 100px;
+
+  }
+  
+  .image-container img {
+    width: 100%; /* Image width */
+    display: block;
+    height: 300px; /* Image display */
+  }
+  
+  .text-overlay {
+    position: absolute; /* Place text overlay on top of the image */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Transform to center */
+    text-align: center; /* Text alignment */
+    color: white; /* Text color */
+  }
+  
+  .employer-text {
+    font-size: 25px; /* Employer text size */
+    color: orange; /* Employer text color */
+    margin-bottom: 1px; /* Employer text bottom margin */
+  }
+  
+  .candidate-text {
+    font-size: 70px; /* Candidate text size */
+    font-weight: bold; /* Candidate text bold */
+    text-transform: uppercase; /* Candidate text uppercase */
+  }
