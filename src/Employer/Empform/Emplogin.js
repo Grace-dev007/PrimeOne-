@@ -36,7 +36,7 @@ function LoginPage() {
     }
 
     try {
-        const response = await axios.post('http://192.168.0.27:4000/api/user/login', {
+        const response = await axios.post('http://192.168.0.34:4000/api/user/login', {
             email,
             password
         });

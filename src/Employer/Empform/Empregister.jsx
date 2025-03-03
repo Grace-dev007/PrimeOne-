@@ -74,7 +74,7 @@ function RegisterPage() {
 
             try {
                 // Sending a POST request to the backend API to register the user using axios
-                const response = await axios.post('http://192.168.0.27:4000/api/user/register', userData);
+                const response = await axios.post('http://192.168.0.34:4000/api/user/register', userData);
 
                 // If the registration is successful, show a success message
                 alert('Registration Successful!');
